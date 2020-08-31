@@ -30,6 +30,7 @@
               <p class="mb-0"><%= favorite.content %></p>
             </div>
             <div>
+              <span><%= render 'favorites/favorite_button', other_micropost: favorite %></span>
               <% if current_user == favorite.user %>
                 <%= link_to "Delete", micropost_url, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
               <% end %>
